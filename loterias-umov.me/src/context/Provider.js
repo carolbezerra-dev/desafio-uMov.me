@@ -4,10 +4,13 @@ import MyContext from './MyContext';
 
 function Provider({ children }) {
   const [cardNumbers, setCardNumbers] = useState([]);
+  const [chosenNumbers, setChosenNumbers] = useState([]);
 
   const contextValues = {
     cardNumbers,
     setCardNumbers,
+    chosenNumbers,
+    setChosenNumbers,
   };
 
   return (
