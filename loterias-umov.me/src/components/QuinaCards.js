@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import MyContext from '../context/MyContext';
+import '../css/pages.css';
+import '../css/card.css';
 
 function QuinaCards() {
   const { cardNumbers, chosenNumbers, setChosenNumbers } = useContext(MyContext);
@@ -15,9 +17,13 @@ function QuinaCards() {
   }
   
   return (
-    <div>
+    <div className="container-card quina">
     {cardNumbers.map((num) => (
-      <button key={num} onClick={() => handleClick(num) }>
+      <button
+        key={num}
+        onClick={() => handleClick(num) }
+        className={ chosenNumbers.includes(num) ? 'background-blue' : 'grey-card'}
+      >
         { num }
       </button>
       ))}

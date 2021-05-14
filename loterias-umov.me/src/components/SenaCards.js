@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import MyContext from '../context/MyContext';
+import '../css/pages.css';
 import '../css/card.css';
 
 function SenaCards() {
@@ -16,13 +17,14 @@ function SenaCards() {
   }
 
   return (
-    <div>
+    <div className="container-card sena">
       {cardNumbers.map((num) => (
         <button
           type="button"
           key={num}
           onClick={() => handleClick(num) }
-          className={ chosenNumbers.includes(num) ? 'background-gray' : 'background-white'}>
+          className={ chosenNumbers.includes(num) ? 'background-blue' : 'grey-card'}
+        >
           { num }
         </button>
         ))}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.margin-right {
+  margin-right: 1vw;
+}
+
+.blue {
+  color: rgba(0, 167, 177, 1);
+}
+
+.grey {
+  color: rgba(122, 122, 122, 1);
+}
+
+.background-blue {
+  background-color: rgba(0, 167, 177, 0.7);
+  border: 1px solid rgba(0, 167, 177, 1);
+}
+
+.background-grey {
+  background-color: rgba(122, 122, 122, 0.7);
+  border: 1px solid rgba(122, 122, 122, 1);
+}
+
+.container-card {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1vw;
+}
+
+.simple-padding {
+  padding: 4px;
+}
+
+.confirm-game {
+  text-decoration: none;
+  padding: 8px;
+}

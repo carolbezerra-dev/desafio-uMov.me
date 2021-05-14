@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MyContext from '../context/MyContext';
-import SenaCards from '../components/SenaCards';
-import QuinaCards from '../components/QuinaCards';
-import FinalPrice from '../components/FinalPrice';
+import { SenaCards, QuinaCards, FinalPrice } from '../components';
+import umovmeImg from '../img/umovme.png';
+import '../css/pages.css';
 
 function Lottery() {
   const { gameName,
@@ -50,39 +50,56 @@ function Lottery() {
         return setReturnUser('Você ainda não marcou nenhuma dezena');
       case chosenNumbers.length > MAX_QUANTITY_PLAYED:
         return setReturnUser(
-          `Você só pode escolher até 15 dezenas, por favor, remova alguma:
-            ${chosenNumbers.join(' - ')}`
+          'Você só pode escolher até 15 dezenas, por favor, remova alguma'
         );
       default:
-        return setReturnUser(`Você jogou as seguntes dezenas: ${chosenNumbers.join(' - ')}`);
+        return setReturnUser(
+          `Você jogou as seguintes dezenas:\n${chosenNumbers.join(' - ')}`
+        );
     }
   }, [chosenNumbers]);
 
   return (
-    <div>
-      <h1>uMov.me Loterias</h1>
-      <h2>{ `Esse jogo é ${gameName}` }</h2>
-      <button
-        type="button"
-        onClick={ () => setGameName('Sena') }
-      >
-        Jogar Sena
-      </button>
-      <button
-        type="button"
-        onClick={ () => setGameName('Quina') }
-      >
-        Jogar Quina
-      </button>
-      <div>
+    <div className="container">
+      <h1 className="blue container-flex-row">
+        <img src={ umovmeImg } alt="uMov.me site title" className="margin-right" />
+        Loterias
+      </h1>
+      <h2 className="grey">{ `Esse jogo é ${gameName}` }</h2>
+      <div className="container-flex-row">
+        <button
+          type="button"
+          onClick={ () => setGameName('Sena') }
+          className={ gameName !== 'Sena' ? 'background-grey' : 'background-blue' }
+        >
+          Jogar Sena
+        </button>
+        <button
+          type="button"
+          onClick={ () => setGameName('Quina') }
+          className={ gameName === 'Sena' ? 'background-grey' : 'background-blue' }
+        >
+          Jogar Quina
+        </button>
+      </div>
+      <div className="container-card">
         { gameName === 'Sena' ? <SenaCards /> : <QuinaCards /> }
       </div>
-      <p>
-      { returnUser }
-      </p>
-      <button onClick={() => setChosenNumbers([])}>Recomeçar Jogo</button>
+      <p style={{whiteSpace: "pre-wrap"}}>{ returnUser }</p>
+      <button
+        type="button"
+        onClick={() => setChosenNumbers([])}
+        className="background-grey simple-padding"
+      >
+        Recomeçar Jogo
+      </button>
       <FinalPrice />
-      <Link to="/pagamento">Confirmar o Jogo</Link>
+      <Link
+        to="/pagamento"
+        className="background-blue confirm-game"
+      >
+        Confirmar o Jogo
+      </Link>
     </div>
   );
 }
