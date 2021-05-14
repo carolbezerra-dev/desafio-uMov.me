@@ -13,7 +13,7 @@ function Provider({ children }) {
     chosenNumbers,
     setChosenNumbers,
     gameName,
-    setGameName
+    setGameName,
   };
 
   return (
