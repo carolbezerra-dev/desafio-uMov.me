@@ -17,9 +17,9 @@ function QuinaCards() {
   return (
     <div>
     {cardNumbers.map((num) => (
-      <span key={num} onClick={() => handleClick(num) }>
+      <button key={num} onClick={() => handleClick(num) }>
         { num }
-      </span>
+      </button>
       ))}
   </div>
   );
