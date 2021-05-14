@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import MyContext from './MyContext';
 
 function Provider({ children }) {
+  const [gameName, setGameName] = useState('Sena');
   const [cardNumbers, setCardNumbers] = useState([]);
   const [chosenNumbers, setChosenNumbers] = useState([]);
 
@@ -11,6 +12,8 @@ function Provider({ children }) {
     setCardNumbers,
     chosenNumbers,
     setChosenNumbers,
+    gameName,
+    setGameName
   };
 
   return (

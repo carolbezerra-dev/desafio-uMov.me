@@ -6,19 +6,33 @@ import QuinaCards from '../components/QuinaCards';
 import FinalPrice from '../components/FinalPrice';
 
 function Lottery() {
-  const { setCardNumbers, chosenNumbers, setChosenNumbers } = useContext(MyContext);
-  const [gameName, setGameName] = useState('Sena');
-  const [returnUser, setReturnUser] = useState('Você ainda não marcou nenhuma dezena');
+  const { gameName,
+    setGameName,
+    setCardNumbers,
+    chosenNumbers,
+    setChosenNumbers, } = useContext(MyContext);
   
-  const MIN_NUMBER_CARD = 1;
+  const [returnUser, setReturnUser] = useState('Você ainda não marcou nenhuma dezena');
+
   useEffect(() => {
     const creatingNumbers = () => {
-      const MAX_NUMBER_CARD = 60;
-      let length = MIN_NUMBER_CARD;
       let numbers = [];
-      while (length <= MAX_NUMBER_CARD) {
-        numbers.push(length);
-        length += 1;
+      if (gameName === 'Sena') {
+        const MIN_SENA_CARD = 1;
+        const MAX_SENA_CARD = 60;
+        let lengthSena = MIN_SENA_CARD;
+        while (lengthSena <= MAX_SENA_CARD) {
+          numbers.push(lengthSena);
+          lengthSena += 1;
+        }
+      } else {
+        const MIN_QUINA_CARD = 0;
+        const MAX_QUINA_CARD = 80;
+        let lengthQuina = MIN_QUINA_CARD;
+        while (lengthQuina <= MAX_QUINA_CARD) {
+          numbers.push(lengthQuina);
+          lengthQuina += 1;
+        }
       }
       const turnNumbersToString = numbers
         .map((num) => num.toString())
@@ -26,16 +40,13 @@ function Lottery() {
       return setCardNumbers(turnNumbersToString);
     }
     creatingNumbers();
-  }, [setCardNumbers]);
-
-  const changingGameName = () => {
-    gameName === 'Sena' ? setGameName('Quina') : setGameName('Sena');
-  }
+  }, [gameName, setCardNumbers]);
 
   useEffect(() => {
+    const MIN_QUANTITY_PLAYED = 1;
     const MAX_QUANTITY_PLAYED = 15;
     switch (true) {
-      case chosenNumbers.length < MIN_NUMBER_CARD:
+      case chosenNumbers.length <  MIN_QUANTITY_PLAYED:
         return setReturnUser('Você ainda não marcou nenhuma dezena');
       case chosenNumbers.length > MAX_QUANTITY_PLAYED:
         return setReturnUser(
@@ -53,15 +64,23 @@ function Lottery() {
       <h2>{ `Esse jogo é ${gameName}` }</h2>
       <button
         type="button"
-        onClick={ changingGameName }
+        onClick={ () => setGameName('Sena') }
       >
-        { gameName === 'Sena' ? 'Mudar para Quina' : 'Mudar para Sena' }
+        Jogar Sena
       </button>
-      { gameName === 'Sena' ? <SenaCards /> : <QuinaCards /> }
+      <button
+        type="button"
+        onClick={ () => setGameName('Quina') }
+      >
+        Jogar Quina
+      </button>
+      <div>
+        { gameName === 'Sena' ? <SenaCards /> : <QuinaCards /> }
+      </div>
       <p>
       { returnUser }
       </p>
-      <button onClick={() => setChosenNumbers([])}>Recomeçar</button>
+      <button onClick={() => setChosenNumbers([])}>Recomeçar Jogo</button>
       <FinalPrice />
       <Link to="/pagamento">Confirmar o Jogo</Link>
     </div>
