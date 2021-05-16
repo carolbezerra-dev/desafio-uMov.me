@@ -23,6 +23,9 @@
       <SenaCards v-if="gameName === 'Sena'" />
       <QuinaCards v-else />
     </div>
+    <router-link to="/pagamento" class="background-blue confirm-game">
+      Confirmar o Jogo
+    </router-link>
   </div>
 </template>
 

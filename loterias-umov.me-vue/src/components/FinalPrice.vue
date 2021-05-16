@@ -16,23 +16,15 @@ export default {
     chosenNumbersLength: Number,
     gameName: String,
   },
-  data() {
-    return {
-      price: 0,
-    };
-  },
   methods: {
     priceTableSena() {
       switch (this.chosenNumbersLength) {
         case 6:
-          this.price = 4.50;
-          break;
+          return 4.50;
         case 7:
-          this.price = 31.50;
-          break;
+          return 31.50;
         case 8:
-          this.price = 126;
-          break;
+          return 126;
         case 9:
           return 378;
         case 10:
@@ -50,7 +42,6 @@ export default {
         default:
           return 0;
       }
-      return this.price;
     },
     priceTableQuina() {
       switch (this.chosenNumbersLength) {

@@ -28,9 +28,6 @@
       :chosenNumbersLength="this.chosenNumbers.length"
       gameName="Sena"
     />
-    <router-link to="/pagamento" class="background-blue confirm-game">
-      Confirmar o Jogo
-    </router-link>
   </div>
 </template>
 
