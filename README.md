@@ -29,6 +29,5 @@ ou `git clone https://github.com/carolbezerra-dev/desafio-uMov.me.git` para HTTP
 - Rode a aplicação React usando `npm start`.
 ### Vue
 - Mude para branch com `git checkout loterias-vue`;  
-- Entrar na pasta com a aplicação: `cd loterias-umov.me-vue`;  
 - Agora, instale as dependências com `npm install`;
 - Rode a aplicação React usando `npm run serve`
