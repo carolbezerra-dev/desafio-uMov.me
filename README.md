@@ -11,6 +11,8 @@ Fazer 2 cartelas de loteria:
 - Cada cartela tem seus valores específicos considerando o jogo escolhido e a quantidade de números selecionados.
 
 ### Aplicação funcionando
+Você pode conferir aqui o deploy da aplicação > https://desafio-loterias.vercel.app/  
+Abaixo, um exemplo:  
 ![](https://github.com/carolbezerra-dev/desafio-uMov.me/blob/loterias-react/loterias.gif)
 
 ## Tecnologias usadas
