@@ -1,32 +1,68 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Lottery</router-link> |
+      <router-link to="/pagamento">Payment</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
 }
 
-#nav {
-  padding: 30px;
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.container-flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.margin-right {
+  margin-right: 1vw;
+}
+
+.blue {
+  color: rgba(0, 167, 177, 1);
+}
+
+.grey {
+  color: rgba(122, 122, 122, 1);
+}
+
+.background-blue {
+  background-color: rgba(0, 167, 177, 0.7);
+  border: 1px solid rgba(0, 167, 177, 1);
+}
+
+.background-grey {
+  background-color: rgba(122, 122, 122, 0.7);
+  border: 1px solid rgba(122, 122, 122, 1);
+}
+
+.container-card {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1vw;
+}
+
+.simple-padding {
+  padding: 4px;
+}
+
+.confirm-game {
+  text-decoration: none;
+  padding: 8px;
 }
 </style>
