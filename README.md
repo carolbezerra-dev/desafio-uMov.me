@@ -15,21 +15,25 @@ Você pode conferir aqui o deploy da aplicação > https://desafio-loterias.verc
 Abaixo, um exemplo:  
 ![](https://github.com/carolbezerra-dev/desafio-uMov.me/blob/loterias-react/loterias.gif)
 
-## Tecnologias usadas
-- React;
-- React-Router;
-- ContextAPI;
-- ESLint Airbnb;
-- Vue;
-- Vue-Router;
-
 ## Para acessar a aplicação
 - Faça o clone do repositório com `git clone git@github.com:carolbezerra-dev/desafio-uMov.me.git` para SSH  
 ou `git clone https://github.com/carolbezerra-dev/desafio-uMov.me.git` para HTTPS  
+### Tecnologias usadas
+O projeto foi desenvolvido usando os frameworks React e Vue  
 ### React
+#### Tecnologias usadas:
+* React-Router;
+* ContextAPI;
+* ESLint Airbnb;
+#### Para acessar
 - Instale as dependências com `npm install`;  
 - Rode a aplicação React usando `npm start`.
 ### Vue
+#### Tecnologias usadas
+- Vue;
+- Vue-Router;
+- ESLint Airbnb;
+#### Para acessar
 - Mude para branch com `git checkout loterias-vue`;  
 - Agora, instale as dependências com `npm install`;
-- Rode a aplicação React usando `npm run serve`
+- Rode a aplicação React usando `npm run serve`.
