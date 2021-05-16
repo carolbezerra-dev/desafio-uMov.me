@@ -11,7 +11,7 @@ Fazer 2 cartelas de loteria:
 - Cada cartela tem seus valores específicos considerando o jogo escolhido e a quantidade de números selecionados.
 
 ### Aplicação funcionando
-![](https://github.com/carolbezerra-dev/desafio-uMov.me/blob/loterias-react/loterias-umov.me/loterias.gif)
+![](https://github.com/carolbezerra-dev/desafio-uMov.me/blob/loterias-react/loterias.gif)
 
 ## Tecnologias usadas
 - React;
@@ -23,10 +23,12 @@ Fazer 2 cartelas de loteria:
 
 ## Para acessar a aplicação
 - Faça o clone do repositório com `git clone git@github.com:carolbezerra-dev/desafio-uMov.me.git` para SSH  
-ou `git clone https://github.com/carolbezerra-dev/desafio-uMov.me.git` para HTTPS
-- Em qual framework você quer ver a aplicação?  
-Se com React, acesse a branch com `git checkout loterias-react`;  
-Se prefere Vue, use `git checkout loterias-vue`;  
-- Para entrar na pasta com a aplicação use `cd loterias-umov.me` ou `cd loterias-umov.me-vue`;  
+ou `git clone https://github.com/carolbezerra-dev/desafio-uMov.me.git` para HTTPS  
+### React
+- Instale as dependências com `npm install`;  
+- Rode a aplicação React usando `npm start`.
+### Vue
+- Mude para branch com `git checkout loterias-vue`;  
+- Entrar na pasta com a aplicação: `cd loterias-umov.me-vue`;  
 - Agora, instale as dependências com `npm install`;
-- Rode a aplicação React usando `npm start` ou Vue `npm serve`
+- Rode a aplicação React usando `npm run serve`
