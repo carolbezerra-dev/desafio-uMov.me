@@ -35,7 +35,7 @@ Está aqui na main e na branch [loterias-react](https://github.com/carolbezerra-
 - Rode a aplicação React usando `npm start`.
 ### App em Vue
 Está na branch [loterias-vue](https://github.com/carolbezerra-dev/desafio-uMov.me/tree/loterias-vue).
-#### Tecnologias usadas
+#### Tecnologias usadas:
 - Vue;
 - Vue-Router;
 - ESLint Airbnb;
