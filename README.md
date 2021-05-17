@@ -43,4 +43,5 @@ Está na branch [loterias-vue](https://github.com/carolbezerra-dev/desafio-uMov.
 - Mude para branch com `git checkout loterias-vue`;  
 - Agora, instale as dependências com `npm install`;
 - Rode a aplicação React usando `npm run serve`.  
-(Teve 1 requisito pedido que não consegui cumprir em Vue: apresentar o valor final na rota /pagamento).
+
+(Teve 1 requisito pedido que não consegui cumprir em Vue: apresentar o valor final na rota */pagamento*).
