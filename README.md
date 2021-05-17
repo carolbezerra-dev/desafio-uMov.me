@@ -10,6 +10,11 @@ Fazer 2 cartelas de loteria:
 - Dar a possibilidade da pessoa usuária marcar e desmarcar os números;
 - Cada cartela tem seus valores específicos considerando o jogo escolhido e a quantidade de números selecionados.
 
+### Estratégia usada:
+- Desenvolvi completo em React;
+- Estudei Vue;
+- Desenvolvi em Vue;
+
 ### Aplicação funcionando
 Você pode conferir aqui o deploy da aplicação > https://desafio-loterias.vercel.app/  
 Abaixo, um exemplo:  
@@ -19,8 +24,8 @@ Abaixo, um exemplo:
 - Faça o clone do repositório com `git clone git@github.com:carolbezerra-dev/desafio-uMov.me.git` para SSH  
 ou `git clone https://github.com/carolbezerra-dev/desafio-uMov.me.git` para HTTPS  
 ### Tecnologias usadas
-O projeto foi desenvolvido usando os frameworks React e Vue  
-### React
+### App em React
+Está aqui na main e na branch [loterias-react](https://github.com/carolbezerra-dev/desafio-uMov.me/tree/loterias-react) também.
 #### Tecnologias usadas:
 * React-Router;
 * ContextAPI;
@@ -28,7 +33,8 @@ O projeto foi desenvolvido usando os frameworks React e Vue
 #### Para acessar
 - Instale as dependências com `npm install`;  
 - Rode a aplicação React usando `npm start`.
-### Vue
+### App em Vue
+Está na branch [loterias-vue](https://github.com/carolbezerra-dev/desafio-uMov.me/tree/loterias-vue).
 #### Tecnologias usadas
 - Vue;
 - Vue-Router;
@@ -36,4 +42,5 @@ O projeto foi desenvolvido usando os frameworks React e Vue
 #### Para acessar
 - Mude para branch com `git checkout loterias-vue`;  
 - Agora, instale as dependências com `npm install`;
-- Rode a aplicação React usando `npm run serve`.
+- Rode a aplicação React usando `npm run serve`.  
+(Teve 1 requisito pedido que não consegui cumprir em Vue: apresentar o valor final na rota /pagamento).
